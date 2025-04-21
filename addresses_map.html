@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1ba181262248516ba63a23c156bc0c86 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1ba181262248516ba63a23c156bc0c86" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1ba181262248516ba63a23c156bc0c86 = L.map(
+                "map_1ba181262248516ba63a23c156bc0c86",
+                {
+                    center: [48.5116605, 14.3662975],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b3d0be43c87db2252d769e37e6aa30a7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b3d0be43c87db2252d769e37e6aa30a7.addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+            var circle_e4946b8195379dbdbda47c5e2efb65f3 = L.circle(
+                [48.5120872, 14.3654166],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_cb64d49f6edfcae690863a85dd448cea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc9c757f669def27480d7e9f21349614 = $(`<div id="html_cc9c757f669def27480d7e9f21349614" style="width: 100.0%; height: 100.0%;">Kalvarienberg 10</div>`)[0];
+                popup_cb64d49f6edfcae690863a85dd448cea.setContent(html_cc9c757f669def27480d7e9f21349614);
+            
+        
+
+        circle_e4946b8195379dbdbda47c5e2efb65f3.bindPopup(popup_cb64d49f6edfcae690863a85dd448cea)
+        ;
+
+        
+    
+    
+            var circle_43b21b60a7d960ab71a60c8db2ca3666 = L.circle(
+                [48.5108374, 14.3672369],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_5d22fe309d63af3b3e0b3da79b3a5dc3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6cbd7fcb95ff9d8e4de009ff98d418ef = $(`<div id="html_6cbd7fcb95ff9d8e4de009ff98d418ef" style="width: 100.0%; height: 100.0%;">Kalvarienberg 19</div>`)[0];
+                popup_5d22fe309d63af3b3e0b3da79b3a5dc3.setContent(html_6cbd7fcb95ff9d8e4de009ff98d418ef);
+            
+        
+
+        circle_43b21b60a7d960ab71a60c8db2ca3666.bindPopup(popup_5d22fe309d63af3b3e0b3da79b3a5dc3)
+        ;
+
+        
+    
+    
+            var circle_a49b069d2ffcc599a93c72bfd782ce56 = L.circle(
+                [48.5111115, 14.3664447],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_63b127ea6563e2807a94a187f8106ef5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff93ad9efd366caaf065d011c8673e17 = $(`<div id="html_ff93ad9efd366caaf065d011c8673e17" style="width: 100.0%; height: 100.0%;">Kalvarienberg 4</div>`)[0];
+                popup_63b127ea6563e2807a94a187f8106ef5.setContent(html_ff93ad9efd366caaf065d011c8673e17);
+            
+        
+
+        circle_a49b069d2ffcc599a93c72bfd782ce56.bindPopup(popup_63b127ea6563e2807a94a187f8106ef5)
+        ;
+
+        
+    
+    
+            var circle_4a10e95178d77cefc55b72298a2afc51 = L.circle(
+                [48.5118277, 14.3670141],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_4e0c2a172cd8575f0f89e86876fe05a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24eab730be375881bc7c250a3f740e0f = $(`<div id="html_24eab730be375881bc7c250a3f740e0f" style="width: 100.0%; height: 100.0%;">Kalvarienberg 16</div>`)[0];
+                popup_4e0c2a172cd8575f0f89e86876fe05a5.setContent(html_24eab730be375881bc7c250a3f740e0f);
+            
+        
+
+        circle_4a10e95178d77cefc55b72298a2afc51.bindPopup(popup_4e0c2a172cd8575f0f89e86876fe05a5)
+        ;
+
+        
+    
+    
+            var circle_0810155a304d87cf4c40a9983e3963d8 = L.circle(
+                [48.510835, 14.3663811],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_77e0e3d988d28c6f9ffdae4e65aeca93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e2086aab6c21dfd7b7ad78121e541a3 = $(`<div id="html_6e2086aab6c21dfd7b7ad78121e541a3" style="width: 100.0%; height: 100.0%;">Kalvarienberg 2</div>`)[0];
+                popup_77e0e3d988d28c6f9ffdae4e65aeca93.setContent(html_6e2086aab6c21dfd7b7ad78121e541a3);
+            
+        
+
+        circle_0810155a304d87cf4c40a9983e3963d8.bindPopup(popup_77e0e3d988d28c6f9ffdae4e65aeca93)
+        ;
+
+        
+    
+    
+            var circle_6abce754fc87844c7560cf0144ff89fa = L.circle(
+                [48.5111072, 14.3669317],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_fe716a69d6540e1ba41e117081b1dc69 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57165d2be08d13c15678eb8868675b16 = $(`<div id="html_57165d2be08d13c15678eb8868675b16" style="width: 100.0%; height: 100.0%;">Kalvarienberg 3</div>`)[0];
+                popup_fe716a69d6540e1ba41e117081b1dc69.setContent(html_57165d2be08d13c15678eb8868675b16);
+            
+        
+
+        circle_6abce754fc87844c7560cf0144ff89fa.bindPopup(popup_fe716a69d6540e1ba41e117081b1dc69)
+        ;
+
+        
+    
+    
+            var circle_3d889b3e09342286aaec78af45e86a8a = L.circle(
+                [48.5114694, 14.3664862],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_b7f1ee84a61aeede1c48ff1cdfa3e876 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db81b00587796322172f9ec6013cfcf2 = $(`<div id="html_db81b00587796322172f9ec6013cfcf2" style="width: 100.0%; height: 100.0%;">Kalvarienberg 6</div>`)[0];
+                popup_b7f1ee84a61aeede1c48ff1cdfa3e876.setContent(html_db81b00587796322172f9ec6013cfcf2);
+            
+        
+
+        circle_3d889b3e09342286aaec78af45e86a8a.bindPopup(popup_b7f1ee84a61aeede1c48ff1cdfa3e876)
+        ;
+
+        
+    
+    
+            var circle_e9057a510932a0510c6c21d7e51a7c75 = L.circle(
+                [48.5108662, 14.3678261],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_05960c00354805e6b57c7bd4c6d46790 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_806a1a4e1ba10c111fddca653f5b87b6 = $(`<div id="html_806a1a4e1ba10c111fddca653f5b87b6" style="width: 100.0%; height: 100.0%;">Kalvarienberg 18</div>`)[0];
+                popup_05960c00354805e6b57c7bd4c6d46790.setContent(html_806a1a4e1ba10c111fddca653f5b87b6);
+            
+        
+
+        circle_e9057a510932a0510c6c21d7e51a7c75.bindPopup(popup_05960c00354805e6b57c7bd4c6d46790)
+        ;
+
+        
+    
+    
+            var circle_4f7d49870ec48c43f7edfeaa9f7b4a98 = L.circle(
+                [48.5119072, 14.3662044],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_39a372bf456798d5a1bbbbc15146516b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3aa44c43350950f58cf38ed1628de0e2 = $(`<div id="html_3aa44c43350950f58cf38ed1628de0e2" style="width: 100.0%; height: 100.0%;">Kalvarienberg 8</div>`)[0];
+                popup_39a372bf456798d5a1bbbbc15146516b.setContent(html_3aa44c43350950f58cf38ed1628de0e2);
+            
+        
+
+        circle_4f7d49870ec48c43f7edfeaa9f7b4a98.bindPopup(popup_39a372bf456798d5a1bbbbc15146516b)
+        ;
+
+        
+    
+    
+            var circle_df7ad4cf3dce4e8f0e62174b02c715a4 = L.circle(
+                [48.5119425, 14.3658293],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_a2d044355e572cdd4c9413d485a5ce3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_661072bc94d775cee70297da6feb4656 = $(`<div id="html_661072bc94d775cee70297da6feb4656" style="width: 100.0%; height: 100.0%;">Kalvarienberg 9</div>`)[0];
+                popup_a2d044355e572cdd4c9413d485a5ce3b.setContent(html_661072bc94d775cee70297da6feb4656);
+            
+        
+
+        circle_df7ad4cf3dce4e8f0e62174b02c715a4.bindPopup(popup_a2d044355e572cdd4c9413d485a5ce3b)
+        ;
+
+        
+    
+    
+            var circle_6e246e55c086a3801f5b93eff333a892 = L.circle(
+                [48.5124088, 14.3650299],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_75a4493604c8009dfafaacbadb6d22d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f2125fbe9e17599c685f27f7e79e0cc = $(`<div id="html_4f2125fbe9e17599c685f27f7e79e0cc" style="width: 100.0%; height: 100.0%;">Kalvarienberg 12</div>`)[0];
+                popup_75a4493604c8009dfafaacbadb6d22d7.setContent(html_4f2125fbe9e17599c685f27f7e79e0cc);
+            
+        
+
+        circle_6e246e55c086a3801f5b93eff333a892.bindPopup(popup_75a4493604c8009dfafaacbadb6d22d7)
+        ;
+
+        
+    
+    
+            var circle_cf0582be4685683dfe21939e1b1dbdd4 = L.circle(
+                [48.5113902, 14.3670248],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_6de46fe52549de9f9839881dfc044882 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70a8c5fa93bbd44959b19ce2d0c2e043 = $(`<div id="html_70a8c5fa93bbd44959b19ce2d0c2e043" style="width: 100.0%; height: 100.0%;">Kalvarienberg 5</div>`)[0];
+                popup_6de46fe52549de9f9839881dfc044882.setContent(html_70a8c5fa93bbd44959b19ce2d0c2e043);
+            
+        
+
+        circle_cf0582be4685683dfe21939e1b1dbdd4.bindPopup(popup_6de46fe52549de9f9839881dfc044882)
+        ;
+
+        
+    
+    
+            var circle_6c4c3bd94155551ddf0978de272a68a8 = L.circle(
+                [48.5118006, 14.366592],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_1ba181262248516ba63a23c156bc0c86);
+        
+    
+        var popup_e9527c7b3975c3d0d0b65329a6b4f465 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af2ce4ce91c3a3e8e66feac42daa880b = $(`<div id="html_af2ce4ce91c3a3e8e66feac42daa880b" style="width: 100.0%; height: 100.0%;">Kalvarienberg 7</div>`)[0];
+                popup_e9527c7b3975c3d0d0b65329a6b4f465.setContent(html_af2ce4ce91c3a3e8e66feac42daa880b);
+            
+        
+
+        circle_6c4c3bd94155551ddf0978de272a68a8.bindPopup(popup_e9527c7b3975c3d0d0b65329a6b4f465)
+        ;
+
+        
+    
+</script>
+</html>

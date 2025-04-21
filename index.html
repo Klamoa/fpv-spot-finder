@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Addresses in View</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-draw@1.0.4/dist/leaflet.draw.css"/>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 100vh;
+        }
+
+        #button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        #fetch-button, #toggle-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #radius-input {
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<div id="button-container">
+    <button id="fetch-button">Fetch Addresses in View</button>
+    <button id="toggle-button">Toggle Circles</button>
+    <input type="number" id="radius-input" value="200" min="50" max="1000" step="50" />
+</div>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+
+<script>
+    const map = L.map('map').setView([48.510600, 14.364291], 16);
+
+    const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/' +
+        'World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye'
+    });
+
+    const baseMaps = {
+        "OpenStreetMap": osmLayer,
+        "Satellite": satelliteLayer
+    };
+
+    L.control.layers(baseMaps).addTo(map);
+
+    const addressCircles = new L.LayerGroup();
+    map.addLayer(addressCircles);
+
+    // Function to fetch addresses based on map bounds
+    async function fetchAddresses(bounds) {
+        addressCircles.clearLayers();
+
+        const south = bounds.getSouth();
+        const west = bounds.getWest();
+        const north = bounds.getNorth();
+        const east = bounds.getEast();
+
+        const query = `
+        [out:json];
+        (
+          node["addr:housenumber"](${south},${west},${north},${east});
+          way["addr:housenumber"](${south},${west},${north},${east});
+        );
+        out center;
+      `;
+
+        try {
+            const response = await fetch("https://overpass-api.de/api/interpreter", {
+                method: "POST",
+                body: query
+            });
+
+            const data = await response.json();
+
+            const radius = parseInt(document.getElementById('radius-input').value) || 200; // Get the radius from input
+
+            data.elements.forEach(e => {
+                const lat = e.lat || (e.center && e.center.lat);
+                const lon = e.lon || (e.center && e.center.lon);
+                const tags = e.tags || {};
+                const address = `${tags["addr:street"] || ""} ${tags["addr:housenumber"] || ""}`.trim();
+
+                if (lat && lon) {
+                    const circle = L.circle([lat, lon], {
+                        radius: radius,
+                        color: "red",
+                        fillOpacity: 0.3
+                    }).bindPopup(address);
+                    addressCircles.addLayer(circle);
+                }
+            });
+        } catch (err) {
+            alert("Error fetching data from Overpass API.");
+            console.error(err);
+        }
+    }
+
+    // Add event listener for the button to fetch addresses
+    document.getElementById('fetch-button').addEventListener('click', function () {
+        const bounds = map.getBounds();
+        fetchAddresses(bounds);
+    });
+
+    // Add event listener for the toggle button to show/hide address circles
+    document.getElementById('toggle-button').addEventListener('click', function () {
+        if (map.hasLayer(addressCircles)) {
+            map.removeLayer(addressCircles);
+        } else {
+            map.addLayer(addressCircles);
+        }
+    });
+</script>
+</body>
+</html>
