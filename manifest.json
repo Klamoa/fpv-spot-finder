@@ -1,0 +1,12 @@
+{
+  "name": "My PWA",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "prefer_related_applications": false
+}
