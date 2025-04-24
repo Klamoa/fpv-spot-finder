@@ -1,12 +1,12 @@
 {
-  "name": "My PWA",
+  "name": "Fpv spot finder",
   "icons": [
     {
       "src": "icons/icon.svg",
       "sizes": "any"
     }
   ],
-  "start_url": "/",
+  "start_url": "https://klamoa.github.io/fpv-spot-finder/",
   "display": "fullscreen",
   "prefer_related_applications": false
 }
