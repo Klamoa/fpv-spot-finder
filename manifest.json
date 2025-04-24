@@ -2,8 +2,12 @@
   "name": "Fpv spot finder",
   "icons": [
     {
-      "src": "icons/icon.svg",
-      "sizes": "any"
+      "src": "icons/icon_512.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "icons/icon_192.png",
+      "sizes": "192x192"
     }
   ],
   "start_url": "https://klamoa.github.io/fpv-spot-finder/",
